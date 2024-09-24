@@ -1,0 +1,576 @@
+ASN_MODULE_SRCS=	\
+	AcaEeCertResponseCubkSpdu.c	\
+	AcaEeCertResponsePlainSpdu.c	\
+	AcaEeCertResponsePrivateSpdu.c	\
+	CertificateChainSpdu.c	\
+	CompositeCrlSpdu.c	\
+	EcaEeCertResponseSpdu.c	\
+	EeEcaCertRequestSpdu.c	\
+	EeRaCertRequestPlainSpdu.c	\
+	EeRaCertRequestSpdu.c	\
+	EeRaDownloadRequestPlainSpdu.c	\
+	EeRaDownloadRequestSpdu.c	\
+	EeRaSuccessorEnrollmentCertRequestSpdu.c	\
+	RaEeCertAckSpdu.c	\
+	RaEeCertInfoSpdu.c	\
+	RaEeEnrollmentCertAckSpdu.c	\
+	SecurityMgmtAid.c	\
+	AcaEeInterfacePdu.c	\
+	AcaEeCertResponse.c	\
+	AcaRaInterfacePdu.c	\
+	RaAcaCertRequest.c	\
+	RaAcaCertRequestFlags.c	\
+	AcaRaCertResponse.c	\
+	AcaResponse.c	\
+	RaAcaCertRequestSpdu.c	\
+	AcaRaCertResponseSpdu.c	\
+	CertManagementPdu.c	\
+	CompositeCrl.c	\
+	CertificateChain.c	\
+	CrlContents.c	\
+	CrlPriorityInfo.c	\
+	ToBeSignedHashIdCrl.c	\
+	HashBasedRevocationInfo.c	\
+	SequenceOfHashBasedRevocationInfo.c	\
+	ToBeSignedLinkageValueCrl.c	\
+	JMaxGroup.c	\
+	SequenceOfJMaxGroup.c	\
+	LAGroup.c	\
+	SequenceOfLAGroup.c	\
+	IMaxGroup.c	\
+	SequenceOfIMaxGroup.c	\
+	IndividualRevocation.c	\
+	SequenceOfIndividualRevocation.c	\
+	CRLBaseTypes_LinkageSeed.c	\
+	SequenceOfLinkageSeed.c	\
+	GroupCrlEntry.c	\
+	SequenceOfGroupCrlEntry.c	\
+	GroupSingleSeedCrlEntry.c	\
+	SequenceOfGroupSingleSeedCrlEntry.c	\
+	CrlAid.c	\
+	SecuredCrl.c	\
+	CrlSsp.c	\
+	CracaType.c	\
+	PermissibleCrls.c	\
+	RootCtl.c	\
+	ToBeSignedRootCtl.c	\
+	PkiCtlInfo.c	\
+	SequenceOfPkiCtlInfo.c	\
+	PkiCtl.c	\
+	ToBeSignedPkiCtl.c	\
+	PkiCertInfo.c	\
+	SequenceOfPkiCertInfo.c	\
+	EcaEeInterfacePdu.c	\
+	EeEcaCertRequest.c	\
+	EcaEeCertResponse.c	\
+	EeRaInterfacePdu.c	\
+	EeRaCertRequest.c	\
+	AdditionalParams.c	\
+	ButterflyParamsOriginal.c	\
+	ButterflyExpansion.c	\
+	RaEeCertInfo.c	\
+	EeRaDownloadRequest.c	\
+	AaaAuthorizationInfo.c	\
+	SequenceOfAaaAuthorizationInfo.c	\
+	RaEeCertAck.c	\
+	LaMaInterfacePdu.c	\
+	MaLaLinkageSeedRequest.c	\
+	IndividualLV.c	\
+	GroupLV.c	\
+	LaMaLinkageSeedResponse.c	\
+	IndividualLSInfo.c	\
+	GroupLSInfo.c	\
+	MaLaLinkageSeedRequestSpdu.c	\
+	LaMaLinkageSeedResponseSpdu.c	\
+	LaRaInterfacePdu.c	\
+	PraLaLinkageValueRequest.c	\
+	PraLaIndividualLinkageValueRequest.c	\
+	LinkageChainId.c	\
+	PraLaGroupLinkageValueRequest.c	\
+	PraLaRequestHeader.c	\
+	LaPraLinkageValueResponse.c	\
+	IndividualLVResponseLinkageChain.c	\
+	GroupLVResponseLinkageChain.c	\
+	EncryptedIndividualLV.c	\
+	EncryptedGroupLV.c	\
+	PraLaIndividualLinkageValueRequestSpdu.c	\
+	PraLaGroupLinkageValueRequestSpdu.c	\
+	LaPraLinkageValueResponseSpdu.c	\
+	ScmsPdu.c	\
+	AcaLaInterfacePdu.c	\
+	AcaMaInterfacePdu.c	\
+	MaRaInterfacePdu.c	\
+	EeMaInterfacePdu.c	\
+	ScmsSsp.c	\
+	RootCaSsp.c	\
+	MaSsp.c	\
+	PgSsp.c	\
+	IcaSsp.c	\
+	EcaSsp.c	\
+	AcaSsp.c	\
+	CraSsp.c	\
+	DcmSsp.c	\
+	LaSsp.c	\
+	RaSsp.c	\
+	EeSsp.c	\
+	Uint3.c	\
+	Uint8.c	\
+	Uint16.c	\
+	Uint32.c	\
+	Uint64.c	\
+	SequenceOfUint8.c	\
+	SequenceOfUint16.c	\
+	Opaque.c	\
+	HashedId32.c	\
+	HashedId10.c	\
+	HashedId8.c	\
+	HashedId4.c	\
+	HashedId3.c	\
+	SequenceOfHashedId3.c	\
+	Time32.c	\
+	Time64.c	\
+	ValidityPeriod.c	\
+	Duration.c	\
+	GeographicRegion.c	\
+	CircularRegion.c	\
+	RectangularRegion.c	\
+	SequenceOfRectangularRegion.c	\
+	PolygonalRegion.c	\
+	TwoDLocation.c	\
+	IdentifiedRegion.c	\
+	SequenceOfIdentifiedRegion.c	\
+	CountryOnly.c	\
+	CountryAndRegions.c	\
+	CountryAndSubregions.c	\
+	RegionAndSubregions.c	\
+	SequenceOfRegionAndSubregions.c	\
+	ThreeDLocation.c	\
+	Latitude.c	\
+	Longitude.c	\
+	Elevation.c	\
+	NinetyDegreeInt.c	\
+	KnownLatitude.c	\
+	UnknownLatitude.c	\
+	OneEightyDegreeInt.c	\
+	KnownLongitude.c	\
+	UnknownLongitude.c	\
+	ElevInt.c	\
+	Signature.c	\
+	EcdsaP256Signature.c	\
+	EcsigP256Signature.c	\
+	EcdsaP384Signature.c	\
+	EccP256CurvePoint.c	\
+	EccP384CurvePoint.c	\
+	SymmAlgorithm.c	\
+	HashAlgorithm.c	\
+	EciesP256EncryptedKey.c	\
+	EcencP256EncryptedKey.c	\
+	EncryptionKey.c	\
+	PublicEncryptionKey.c	\
+	BasePublicEncryptionKey.c	\
+	PublicVerificationKey.c	\
+	SymmetricEncryptionKey.c	\
+	AidSsp.c	\
+	SequenceOfAidSsp.c	\
+	Aid.c	\
+	SequenceOfAid.c	\
+	ServiceSpecificPermissions.c	\
+	BitmapSsp.c	\
+	SspValue.c	\
+	SspBitmask.c	\
+	AidSspRange.c	\
+	SequenceOfAidSspRange.c	\
+	SspRange.c	\
+	BitmapSspRange.c	\
+	SequenceOfOctetString.c	\
+	SubjectAssurance.c	\
+	CrlSeries.c	\
+	IValue.c	\
+	Hostname.c	\
+	LinkageValue.c	\
+	GroupLinkageValue.c	\
+	LaId.c	\
+	SecurityBaseDataTypes_LinkageSeed.c	\
+	SignedDataPayload.c	\
+	V2XSecData.c	\
+	V2XSecContent.c	\
+	SignedData.c	\
+	SignerIdentifier.c	\
+	ToBeSignedData.c	\
+	HashedData.c	\
+	HeaderInfo.c	\
+	MissingCrlIdentifier.c	\
+	PduFunctionalType.c	\
+	Countersignature.c	\
+	EncryptedData.c	\
+	RecipientInfo.c	\
+	SequenceOfRecipientInfo.c	\
+	PreSharedKeyRecipientInfo.c	\
+	SymmRecipientInfo.c	\
+	PKRecipientInfo.c	\
+	EncryptedDataEncryptionKey.c	\
+	SymmetricCiphertext.c	\
+	One28BitCcmCiphertext.c	\
+	Certificate.c	\
+	SequenceOfCertificate.c	\
+	CertificateBase.c	\
+	CertificateType.c	\
+	ExplicitCertificate.c	\
+	Reserved.c	\
+	IssuerIdentifier.c	\
+	ToBeSignedCertificate.c	\
+	CertificateId.c	\
+	LinkageData.c	\
+	EndEntityType.c	\
+	AidGroupPermissions.c	\
+	SequenceOfAidGroupPermissions.c	\
+	SubjectPermissions.c	\
+	VerificationKeyIndicator.c	\
+	V2XSecData-Encrypted.c	\
+	V2XSecData-EncryptedOpen.c	\
+	V2XSecData-EncryptedSigned.c	\
+	V2XSecData-Signed.c	\
+	V2XSecData-SignedCertRequest.c	\
+	V2XSecData-SignedEncrypted.c	\
+	V2XSecData-SignedEncryptedCertRequest.c	\
+	V2XSecData-Unsecured.c	\
+	ScmsPdu-Scoped.c	\
+	ScopedCertificateRequest.c	\
+	SignedCertificateRequest.c	\
+	SignerSelf.c	\
+	SignerSingleCert.c
+
+ASN_MODULE_HDRS=	\
+	AcaEeCertResponseCubkSpdu.h	\
+	AcaEeCertResponsePlainSpdu.h	\
+	AcaEeCertResponsePrivateSpdu.h	\
+	CertificateChainSpdu.h	\
+	CompositeCrlSpdu.h	\
+	EcaEeCertResponseSpdu.h	\
+	EeEcaCertRequestSpdu.h	\
+	EeRaCertRequestPlainSpdu.h	\
+	EeRaCertRequestSpdu.h	\
+	EeRaDownloadRequestPlainSpdu.h	\
+	EeRaDownloadRequestSpdu.h	\
+	EeRaSuccessorEnrollmentCertRequestSpdu.h	\
+	RaEeCertAckSpdu.h	\
+	RaEeCertInfoSpdu.h	\
+	RaEeEnrollmentCertAckSpdu.h	\
+	SecurityMgmtAid.h	\
+	AcaEeInterfacePdu.h	\
+	AcaEeCertResponse.h	\
+	AcaRaInterfacePdu.h	\
+	RaAcaCertRequest.h	\
+	RaAcaCertRequestFlags.h	\
+	AcaRaCertResponse.h	\
+	AcaResponse.h	\
+	RaAcaCertRequestSpdu.h	\
+	AcaRaCertResponseSpdu.h	\
+	CertManagementPdu.h	\
+	CompositeCrl.h	\
+	CertificateChain.h	\
+	CrlContents.h	\
+	CrlPriorityInfo.h	\
+	ToBeSignedHashIdCrl.h	\
+	HashBasedRevocationInfo.h	\
+	SequenceOfHashBasedRevocationInfo.h	\
+	ToBeSignedLinkageValueCrl.h	\
+	JMaxGroup.h	\
+	SequenceOfJMaxGroup.h	\
+	LAGroup.h	\
+	SequenceOfLAGroup.h	\
+	IMaxGroup.h	\
+	SequenceOfIMaxGroup.h	\
+	IndividualRevocation.h	\
+	SequenceOfIndividualRevocation.h	\
+	CRLBaseTypes_LinkageSeed.h	\
+	SequenceOfLinkageSeed.h	\
+	GroupCrlEntry.h	\
+	SequenceOfGroupCrlEntry.h	\
+	GroupSingleSeedCrlEntry.h	\
+	SequenceOfGroupSingleSeedCrlEntry.h	\
+	CrlAid.h	\
+	SecuredCrl.h	\
+	CrlSsp.h	\
+	CracaType.h	\
+	PermissibleCrls.h	\
+	RootCtl.h	\
+	ToBeSignedRootCtl.h	\
+	PkiCtlInfo.h	\
+	SequenceOfPkiCtlInfo.h	\
+	PkiCtl.h	\
+	ToBeSignedPkiCtl.h	\
+	PkiCertInfo.h	\
+	SequenceOfPkiCertInfo.h	\
+	EcaEeInterfacePdu.h	\
+	EeEcaCertRequest.h	\
+	EcaEeCertResponse.h	\
+	EeRaInterfacePdu.h	\
+	EeRaCertRequest.h	\
+	AdditionalParams.h	\
+	ButterflyParamsOriginal.h	\
+	ButterflyExpansion.h	\
+	RaEeCertInfo.h	\
+	EeRaDownloadRequest.h	\
+	AaaAuthorizationInfo.h	\
+	SequenceOfAaaAuthorizationInfo.h	\
+	RaEeCertAck.h	\
+	LaMaInterfacePdu.h	\
+	MaLaLinkageSeedRequest.h	\
+	IndividualLV.h	\
+	GroupLV.h	\
+	LaMaLinkageSeedResponse.h	\
+	IndividualLSInfo.h	\
+	GroupLSInfo.h	\
+	MaLaLinkageSeedRequestSpdu.h	\
+	LaMaLinkageSeedResponseSpdu.h	\
+	LaRaInterfacePdu.h	\
+	PraLaLinkageValueRequest.h	\
+	PraLaIndividualLinkageValueRequest.h	\
+	LinkageChainId.h	\
+	PraLaGroupLinkageValueRequest.h	\
+	PraLaRequestHeader.h	\
+	LaPraLinkageValueResponse.h	\
+	IndividualLVResponseLinkageChain.h	\
+	GroupLVResponseLinkageChain.h	\
+	EncryptedIndividualLV.h	\
+	EncryptedGroupLV.h	\
+	PraLaIndividualLinkageValueRequestSpdu.h	\
+	PraLaGroupLinkageValueRequestSpdu.h	\
+	LaPraLinkageValueResponseSpdu.h	\
+	ScmsPdu.h	\
+	AcaLaInterfacePdu.h	\
+	AcaMaInterfacePdu.h	\
+	MaRaInterfacePdu.h	\
+	EeMaInterfacePdu.h	\
+	ScmsSsp.h	\
+	RootCaSsp.h	\
+	MaSsp.h	\
+	PgSsp.h	\
+	IcaSsp.h	\
+	EcaSsp.h	\
+	AcaSsp.h	\
+	CraSsp.h	\
+	DcmSsp.h	\
+	LaSsp.h	\
+	RaSsp.h	\
+	EeSsp.h	\
+	Uint3.h	\
+	Uint8.h	\
+	Uint16.h	\
+	Uint32.h	\
+	Uint64.h	\
+	SequenceOfUint8.h	\
+	SequenceOfUint16.h	\
+	Opaque.h	\
+	HashedId32.h	\
+	HashedId10.h	\
+	HashedId8.h	\
+	HashedId4.h	\
+	HashedId3.h	\
+	SequenceOfHashedId3.h	\
+	Time32.h	\
+	Time64.h	\
+	ValidityPeriod.h	\
+	Duration.h	\
+	GeographicRegion.h	\
+	CircularRegion.h	\
+	RectangularRegion.h	\
+	SequenceOfRectangularRegion.h	\
+	PolygonalRegion.h	\
+	TwoDLocation.h	\
+	IdentifiedRegion.h	\
+	SequenceOfIdentifiedRegion.h	\
+	CountryOnly.h	\
+	CountryAndRegions.h	\
+	CountryAndSubregions.h	\
+	RegionAndSubregions.h	\
+	SequenceOfRegionAndSubregions.h	\
+	ThreeDLocation.h	\
+	Latitude.h	\
+	Longitude.h	\
+	Elevation.h	\
+	NinetyDegreeInt.h	\
+	KnownLatitude.h	\
+	UnknownLatitude.h	\
+	OneEightyDegreeInt.h	\
+	KnownLongitude.h	\
+	UnknownLongitude.h	\
+	ElevInt.h	\
+	Signature.h	\
+	EcdsaP256Signature.h	\
+	EcsigP256Signature.h	\
+	EcdsaP384Signature.h	\
+	EccP256CurvePoint.h	\
+	EccP384CurvePoint.h	\
+	SymmAlgorithm.h	\
+	HashAlgorithm.h	\
+	EciesP256EncryptedKey.h	\
+	EcencP256EncryptedKey.h	\
+	EncryptionKey.h	\
+	PublicEncryptionKey.h	\
+	BasePublicEncryptionKey.h	\
+	PublicVerificationKey.h	\
+	SymmetricEncryptionKey.h	\
+	AidSsp.h	\
+	SequenceOfAidSsp.h	\
+	Aid.h	\
+	SequenceOfAid.h	\
+	ServiceSpecificPermissions.h	\
+	BitmapSsp.h	\
+	SspValue.h	\
+	SspBitmask.h	\
+	AidSspRange.h	\
+	SequenceOfAidSspRange.h	\
+	SspRange.h	\
+	BitmapSspRange.h	\
+	SequenceOfOctetString.h	\
+	SubjectAssurance.h	\
+	CrlSeries.h	\
+	IValue.h	\
+	Hostname.h	\
+	LinkageValue.h	\
+	GroupLinkageValue.h	\
+	LaId.h	\
+	SecurityBaseDataTypes_LinkageSeed.h	\
+	SignedDataPayload.h	\
+	V2XSecData.h	\
+	V2XSecContent.h	\
+	SignedData.h	\
+	SignerIdentifier.h	\
+	ToBeSignedData.h	\
+	HashedData.h	\
+	HeaderInfo.h	\
+	MissingCrlIdentifier.h	\
+	PduFunctionalType.h	\
+	Countersignature.h	\
+	EncryptedData.h	\
+	RecipientInfo.h	\
+	SequenceOfRecipientInfo.h	\
+	PreSharedKeyRecipientInfo.h	\
+	SymmRecipientInfo.h	\
+	PKRecipientInfo.h	\
+	EncryptedDataEncryptionKey.h	\
+	SymmetricCiphertext.h	\
+	One28BitCcmCiphertext.h	\
+	Certificate.h	\
+	SequenceOfCertificate.h	\
+	CertificateBase.h	\
+	CertificateType.h	\
+	ExplicitCertificate.h	\
+	Reserved.h	\
+	IssuerIdentifier.h	\
+	ToBeSignedCertificate.h	\
+	CertificateId.h	\
+	LinkageData.h	\
+	EndEntityType.h	\
+	AidGroupPermissions.h	\
+	SequenceOfAidGroupPermissions.h	\
+	SubjectPermissions.h	\
+	VerificationKeyIndicator.h	\
+	V2XSecData-Encrypted.h	\
+	V2XSecData-EncryptedOpen.h	\
+	V2XSecData-EncryptedSigned.h	\
+	V2XSecData-Signed.h	\
+	V2XSecData-SignedCertRequest.h	\
+	V2XSecData-SignedEncrypted.h	\
+	V2XSecData-SignedEncryptedCertRequest.h	\
+	V2XSecData-Unsecured.h	\
+	ScmsPdu-Scoped.h	\
+	ScopedCertificateRequest.h	\
+	SignedCertificateRequest.h	\
+	SignerSelf.h	\
+	SignerSingleCert.h
+
+ASN_MODULE_HDRS+=OPEN_TYPE.h
+ASN_MODULE_SRCS+=OPEN_TYPE.c
+ASN_MODULE_HDRS+=constr_CHOICE.h
+ASN_MODULE_HDRS+=IA5String.h
+ASN_MODULE_SRCS+=IA5String.c
+ASN_MODULE_HDRS+=OCTET_STRING.h
+ASN_MODULE_HDRS+=INTEGER.h
+ASN_MODULE_SRCS+=INTEGER.c
+ASN_MODULE_HDRS+=NULL.h
+ASN_MODULE_SRCS+=NULL.c
+ASN_MODULE_HDRS+=NativeEnumerated.h
+ASN_MODULE_SRCS+=NativeEnumerated.c
+ASN_MODULE_HDRS+=NativeInteger.h
+ASN_MODULE_SRCS+=NativeInteger.c
+ASN_MODULE_HDRS+=UTF8String.h
+ASN_MODULE_SRCS+=UTF8String.c
+ASN_MODULE_HDRS+=asn_SEQUENCE_OF.h
+ASN_MODULE_SRCS+=asn_SEQUENCE_OF.c
+ASN_MODULE_HDRS+=asn_SET_OF.h
+ASN_MODULE_SRCS+=asn_SET_OF.c
+ASN_MODULE_SRCS+=constr_CHOICE.c
+ASN_MODULE_HDRS+=constr_SEQUENCE.h
+ASN_MODULE_SRCS+=constr_SEQUENCE.c
+ASN_MODULE_HDRS+=constr_SEQUENCE_OF.h
+ASN_MODULE_SRCS+=constr_SEQUENCE_OF.c
+ASN_MODULE_HDRS+=constr_SET_OF.h
+ASN_MODULE_SRCS+=constr_SET_OF.c
+ASN_MODULE_HDRS+=asn_application.h
+ASN_MODULE_SRCS+=asn_application.c
+ASN_MODULE_HDRS+=asn_ioc.h
+ASN_MODULE_HDRS+=asn_system.h
+ASN_MODULE_HDRS+=asn_codecs.h
+ASN_MODULE_HDRS+=asn_internal.h
+ASN_MODULE_SRCS+=asn_internal.c
+ASN_MODULE_HDRS+=asn_random_fill.h
+ASN_MODULE_SRCS+=asn_random_fill.c
+ASN_MODULE_HDRS+=asn_bit_data.h
+ASN_MODULE_SRCS+=asn_bit_data.c
+ASN_MODULE_SRCS+=OCTET_STRING.c
+ASN_MODULE_HDRS+=BIT_STRING.h
+ASN_MODULE_SRCS+=BIT_STRING.c
+ASN_MODULE_SRCS+=asn_codecs_prim.c
+ASN_MODULE_HDRS+=asn_codecs_prim.h
+ASN_MODULE_HDRS+=ber_tlv_length.h
+ASN_MODULE_SRCS+=ber_tlv_length.c
+ASN_MODULE_HDRS+=ber_tlv_tag.h
+ASN_MODULE_SRCS+=ber_tlv_tag.c
+ASN_MODULE_HDRS+=ber_decoder.h
+ASN_MODULE_SRCS+=ber_decoder.c
+ASN_MODULE_HDRS+=der_encoder.h
+ASN_MODULE_SRCS+=der_encoder.c
+ASN_MODULE_HDRS+=constr_TYPE.h
+ASN_MODULE_SRCS+=constr_TYPE.c
+ASN_MODULE_HDRS+=constraints.h
+ASN_MODULE_SRCS+=constraints.c
+ASN_MODULE_HDRS+=xer_support.h
+ASN_MODULE_SRCS+=xer_support.c
+ASN_MODULE_HDRS+=xer_decoder.h
+ASN_MODULE_SRCS+=xer_decoder.c
+ASN_MODULE_HDRS+=xer_encoder.h
+ASN_MODULE_SRCS+=xer_encoder.c
+ASN_MODULE_HDRS+=per_support.h
+ASN_MODULE_SRCS+=per_support.c
+ASN_MODULE_HDRS+=per_decoder.h
+ASN_MODULE_SRCS+=per_decoder.c
+ASN_MODULE_HDRS+=per_encoder.h
+ASN_MODULE_SRCS+=per_encoder.c
+ASN_MODULE_HDRS+=per_opentype.h
+ASN_MODULE_SRCS+=per_opentype.c
+ASN_MODULE_HDRS+=oer_decoder.h
+ASN_MODULE_HDRS+=oer_encoder.h
+ASN_MODULE_HDRS+=oer_support.h
+ASN_MODULE_SRCS+=oer_decoder.c
+ASN_MODULE_SRCS+=oer_encoder.c
+ASN_MODULE_SRCS+=oer_support.c
+ASN_MODULE_SRCS+=OPEN_TYPE_oer.c
+ASN_MODULE_SRCS+=INTEGER_oer.c
+ASN_MODULE_SRCS+=BIT_STRING_oer.c
+ASN_MODULE_SRCS+=OCTET_STRING_oer.c
+ASN_MODULE_SRCS+=NativeInteger_oer.c
+ASN_MODULE_SRCS+=NativeEnumerated_oer.c
+ASN_MODULE_SRCS+=constr_CHOICE_oer.c
+ASN_MODULE_SRCS+=constr_SEQUENCE_oer.c
+ASN_MODULE_SRCS+=constr_SET_OF_oer.c
+
+ASN_MODULE_CFLAGS=
+
+lib_LTLIBRARIES+=libasncodec.la
+libasncodec_la_SOURCES=$(ASN_MODULE_SRCS) $(ASN_MODULE_HDRS)
+libasncodec_la_CPPFLAGS=-I$(top_srcdir)/
+libasncodec_la_CFLAGS=$(ASN_MODULE_CFLAGS)
+libasncodec_la_LDFLAGS=-lm
